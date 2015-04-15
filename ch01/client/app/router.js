@@ -6,4 +6,6 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
+  this.resource('login',{path:'/login'});
+  this.resource('anasayfa',{path:'/'});
 });

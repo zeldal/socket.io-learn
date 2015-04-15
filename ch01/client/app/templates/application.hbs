@@ -1,1 +1,10 @@
-{{outlet}}
+<div class ="container">
+     <ul class="nav nav-tabs">
+         <li role="presentation">
+              {{#link-to 'login' activeClass="active"}}Login{{/link-to}}
+         </li>
+         <li role="presentation"> {{#link-to 'anasayfa' activeClass="active"}}Anasayfa{{/link-to}}</li>
+     </ul>
+
+     {{outlet}}
+</div>
