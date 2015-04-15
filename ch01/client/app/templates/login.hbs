@@ -1,0 +1,14 @@
+<form class="form-signin">
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <label for="inputEmail" class="sr-only">Email address</label>
+     {{input id='inputEmail'  value=model.username type="email" placeholder="Email address" tabindex="1" autofocus="autofocus" class="form-control"}}
+
+    <label for="inputPassword" class="sr-only">Password</label>
+     {{input id='inputPassword' value=model.password type="password" placeholder="Password"  tabindex="2" class="form-control"}}
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" {{action "login"}}>Sign in</button>
+</form>
