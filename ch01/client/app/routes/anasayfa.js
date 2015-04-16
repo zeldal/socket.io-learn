@@ -1,7 +1,12 @@
 import Ember from 'ember';
+import UserModel from 'client/models/user';
+
 
 export default Ember.Route.extend({
-    afterModel: function () {
-        this.controllerFor("anasayfa").startService();
+    model: function () {
+        return UserModel.getUserModel();
+    },
+    afterModel: function (user,transition) {
+        this.controllerFor("anasayfa").startService(user);
     }
 });

@@ -5,4 +5,25 @@
     <li role="presentation"> {{#link-to 'login' activeClass="active"}}Private{{/link-to}}</li>
 </ul>
 
+<div class="main-chat">
+
+    <div id="public-chat-div" class="chat-wrapper">
+         {{#each messageElement in publicMessageElements}}
+             <div class="chat-item ">
+                 <ul>
+                     <li>
+                         <h4>{{messageElement.sender}}</h4>{{messageElement.message}} - <small>{{messageElement.datetime}}</small>
+                     </li>
+                 </ul>
+             </div>
+         {{/each}}
+
+    </div>
+</div>
+
+<div class="main-chatting-field">
+     {{textarea id="message-input-public" action="sendPublicMessage" value=message  placeholder="Mesajınızı Yazınız..." }}
+</div>
+
+
 {{outlet}}
