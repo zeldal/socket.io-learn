@@ -1,0 +1,12 @@
+{
+  "name": "socket.io-learn",
+  "version": "0.0.1",
+  "description": "A simple chat client using socket.io",
+  "main": "index.js",
+  "private": true,
+  "license": "BSD",
+  "dependencies": {
+    "express": "4.11.2",
+    "socket.io": "1.3.5"
+  }
+}

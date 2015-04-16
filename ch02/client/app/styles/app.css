@@ -1,0 +1,156 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin .checkbox {
+    font-weight: normal;
+}
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.main-chat{
+    width:100%;
+    background-color:#fff;
+    position:relative;
+    float:left;
+    height: calc(100% - 200px);
+    margin-bottom: 40px;
+    box-shadow: 0px 30px 50px -26px #000;
+    padding: 50px 20px;
+    min-height: 300px;
+}
+.main-chatting-field{
+    float:left;
+    width:100%;
+    height:120px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+}
+
+
+
+.main-chatting-field>textarea{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0px 20px 20px -20px #000;
+    line-height: 20px;
+    resize: none;
+}
+
+.main-chatting-field>textarea:focus{
+    box-shadow: 0px 0px 15px 0px #00CCFF;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: 5px;
+}
+
+
+
+.main-chatting-field ul {
+    position: absolute;
+    top:10px;
+    right: 15px;
+    z-index: 9;
+    font-size: 24px;
+    background-color: #fff;
+
+}
+
+.main-chatting-field ul li{
+    float: right;
+    display:inline;
+    margin-right: -10px;
+}
+.main-chatting-field ul li button > .fa-paperclip, .main-chatting-field ul li button > .fa-eyedropper{
+    color: #97D0CE;
+}
+.main-chatting-field ul li button > .fa-paperclip:hover, .main-chatting-field ul li button > .fa-eyedropper:hover{
+    color: #97D0CE;
+
+}
+.chat-wrapper{
+    height: calc(100% - 80px);
+    overflow-y: auto;
+    width: 100%;
+    padding-right: 20px;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+}
+.chat-item{
+    font-family: 'Roboto';
+    margin-bottom:15px;
+}
+
+.chat-item ul li p{
+    font-size:0.8em;
+    font-weight: 500;
+}
+.chat-item small{
+    font-size:12px;
+    color:#888888
+}
+
+.chat-item b{
+    font-weight: 800;
+}
+
+.chat-item h4{
+    margin: 0;
+    font-weight: 400;
+    font-size:1.8em;
+}
+
+
+.chat-item ul li:nth-child(2){
+    margin-bottom:0;
+}
+.dr-left-pain{
+    position: relative;
+    overflow: auto;
+    min-width: 600px;
+    float: left;
+    width: calc(100% - 425px);
+    height: calc(100% - 200px);
+
+}
+.dr-bg{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+}
