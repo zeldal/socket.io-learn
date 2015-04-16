@@ -35,6 +35,7 @@ app.post('/api/login', function (request, response) {
     winston.log("warn", "Request Body: " + (JSON.stringify(request.body)) + " ");
     return request.session.regenerate(function(sessionError) {
         if (sessionError === null || typeof(sessionError) === 'undefined') {
+            request.session.isAuthenticated = true;
             request.session.username = request.body.username;
             request.session.clientIp = request.ip;
             response.setHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -95,7 +96,7 @@ io.on('connection', function (socket) {
     var addedUser = false;
     console.log("User is connected:"+JSON.stringify(socket.session));
     // when the client emits 'new message', this listens and executes
-    if(!socket.session || !socket.session.username ){
+    if(!(socket.session && socket.session.isAuthenticated) ){
         console.log("No Session user is going to dc");
         return socket.disconnect('unauthorized');
     }
