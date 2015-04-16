@@ -13,7 +13,19 @@ userModel.reopenClass({
     },
     setUserModel: function(user){
         return Ember.RSVP.resolve( (sessionStorage.user = JSON.stringify(user)));
-   }
+   },
+    login: function(user){
+        sessionStorage.user = JSON.stringify(user);
+        return Ember.$.ajax({
+            url: '/api/login',
+            type: 'POST',
+            dataType: 'json',
+            data: JSON.stringify(user),
+            contentType: 'application/json'
+        },function(error){
+            alert('Bir hata oluştu: ' + error);
+        });
+    }
 });
 
 export default userModel;
