@@ -13,6 +13,6 @@ module.exports = function(app) {
     app.use(proxyPath, function(req, res, next){
         // include root path in proxied request
         req.url = path.join(proxyPath, req.url);
-        proxy.web(req, res, { target: 'http://localhost:4100' });
+        proxy.web(req, res, { target: 'http://localhost:4102' });
     });
 };

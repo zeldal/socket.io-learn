@@ -7,7 +7,7 @@ module.exports = function (app) {
         {
             target: {
                 host: 'localhost',
-                port: 4100
+                port: 4102
             },
             ws: true
         });
