@@ -2,28 +2,41 @@
     <li role="presentation">
          {{#link-to 'login' activeClass="active"}}Public{{/link-to}}
     </li>
-    <li role="presentation"> {{#link-to 'login' activeClass="active"}}Private{{/link-to}}</li>
+    <!--<li role="presentation"> {{#link-to 'login' activeClass="active"}}Private{{/link-to}}</li>-->
 </ul>
+<div class="dr-bg">
+    <div class="dr-left-pain">
+        <div class="main-chat">
 
-<div class="main-chat">
+            <div id="public-chat-div" class="chat-wrapper">
+                 {{#each messageElement in publicMessageElements}}
+                     <div class="chat-item ">
+                         <ul>
+                             <li>
+                                 <h4>{{messageElement.sender}}</h4>{{messageElement.message}} - <small>{{messageElement.datetime}}</small>
+                             </li>
+                         </ul>
+                     </div>
+                 {{/each}}
 
-    <div id="public-chat-div" class="chat-wrapper">
-         {{#each messageElement in publicMessageElements}}
-             <div class="chat-item ">
-                 <ul>
-                     <li>
-                         <h4>{{messageElement.sender}}</h4>{{messageElement.message}} - <small>{{messageElement.datetime}}</small>
-                     </li>
-                 </ul>
-             </div>
+            </div>
+        </div>
+
+        <div class="main-chatting-field">
+             {{textarea id="message-input-public" action="sendPublicMessage" value=message  placeholder="Mesajınızı Yazınız..." }}
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-2 col-sm-offset-1 blog-sidebar pull-right">
+    <div class="sidebar-module">
+        <h4>Users</h4>
+         {{#each user in userList}}
+             <ol class="list-unstyled">
+                 <li><a href="#">{{user.username}} - {{user.status}}</a></li>
+             </ol>
          {{/each}}
 
     </div>
 </div>
-
-<div class="main-chatting-field">
-     {{textarea id="message-input-public" action="sendPublicMessage" value=message  placeholder="Mesajınızı Yazınız..." }}
-</div>
-
-
-{{outlet}}

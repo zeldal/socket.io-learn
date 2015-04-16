@@ -139,3 +139,18 @@ body {
 .chat-item ul li:nth-child(2){
     margin-bottom:0;
 }
+.dr-left-pain{
+    position: relative;
+    overflow: auto;
+    min-width: 600px;
+    float: left;
+    width: calc(100% - 425px);
+    height: calc(100% - 200px);
+
+}
+.dr-bg{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+}

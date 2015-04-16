@@ -3,8 +3,8 @@ var userModel = Ember.Object.extend({
     password:""
 });
 var staticUserModel = userModel.create();
-if (localStorage.user)
-    staticUserModel = userModel.create(JSON.parse(localStorage.user));
+if (sessionStorage.user)
+    staticUserModel = userModel.create(JSON.parse(sessionStorage.user));
 
 userModel.reopenClass({
     getUserModel: function(){
@@ -12,7 +12,7 @@ userModel.reopenClass({
 
     },
     setUserModel: function(user){
-        return Ember.RSVP.resolve( (localStorage.user = JSON.stringify(user)));
+        return Ember.RSVP.resolve( (sessionStorage.user = JSON.stringify(user)));
    }
 });
 
